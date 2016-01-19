@@ -24,17 +24,14 @@ Creates a [double-precision floating-point number][ieee754] from a [literal bit 
 
 ``` javascript
 var bstr = '0100000000010000000000000000000000000000000000000000000000000000';
-
 var val = fromBits( bstr );
 // returns 4
 
 bstr = '0100000000001001001000011111101101010100010001000010110100011000';
-
 val = fromBits( bstr );
 // returns 3.14... (pi)
 
 bstr = '1111111111100001110011001111001110000101111010111100100010100000';
-
 val = fromBits( bstr );
 // returns -1e308
 ```
@@ -43,12 +40,10 @@ The `function` handles [subnormals][subnormals].
 
 ``` javascript
 bstr = '1000000000000000000000000000000000000000000000000001100011010011';
-
 val = fromBits( bstr );
 // returns -3.14e-320
 
 bstr = '0000000000000000000000000000000000000000000000000000000000000001';
-
 val = fromBits( bstr );
 // returns 5e-324
 ```
@@ -57,27 +52,22 @@ The `function` handles special values.
 
 ``` javascript
 bstr = '0000000000000000000000000000000000000000000000000000000000000000';
-
 val = fromBits( bstr );
 // returns 0
 
 bstr = '1000000000000000000000000000000000000000000000000000000000000000';
-
 val = fromBits( bstr );
 // returns -0
 
 bstr = '0111111111111000000000000000000000000000000000000000000000000000';
-
 val = fromBits( bstr );
 // returns NaN
 
 bstr = '0111111111110000000000000000000000000000000000000000000000000000';
-
 val = fromBits( bstr );
 // returns +infinity
 
 bstr = '1111111111110000000000000000000000000000000000000000000000000000';
-
 val = fromBits( bstr );
 // returns -infinity
 ```
