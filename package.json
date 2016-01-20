@@ -1,6 +1,6 @@
 {
   "name": "math-float64-from-bits",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Creates a double-precision floating-point number from a literal bit representation.",
   "author": {
     "name": "Athan Reines",
